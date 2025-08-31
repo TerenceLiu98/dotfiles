@@ -1,0 +1,281 @@
+[env]
+TERM = "xterm-256color"
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+# create binding to open new tab in tmux
+[keyboard]
+[[keyboard.bindings]]
+key = "W"
+mods = "Command|Shift"
+command = { program = "/opt/homebrew/bin/tmux", args = ["kill-pane"] }
+
+[[keyboard.bindings]]
+key = "T"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = ["new-window"] }
+
+[[keyboard.bindings]]
+key = "D"
+mods = "Command|Shift"
+command = { program = "/opt/homebrew/bin/tmux", args = ["split-window", "-c", "#{pane_current_path}", "-h", "-p", "20"] }
+
+[[keyboard.bindings]]
+key = "H"
+mods = "Command|Shift"
+command = { program = "/opt/homebrew/bin/tmux", args = ["split-window", "-c", "#{pane_current_path}", "-v", "-p", "20"] }
+
+[[keyboard.bindings]]
+key = "Key1"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = [
+    "select-window",
+    "-t",
+    "1",
+] }
+
+[[keyboard.bindings]]
+key = "Key2"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = [
+    "select-window",
+    "-t",
+    "2",
+] }
+
+[[keyboard.bindings]]
+key = "Key3"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = [
+    "select-window",
+    "-t",
+    "3",
+] }
+
+[[keyboard.bindings]]
+key = "Key4"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = [
+    "select-window",
+    "-t",
+    "4",
+] }
+
+[[keyboard.bindings]]
+key = "Key5"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = [
+    "select-window",
+    "-t",
+    "5",
+] }
+
+[[keyboard.bindings]]
+key = "Key6"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = [
+    "select-window",
+    "-t",
+    "6",
+] }
+
+[[keyboard.bindings]]
+key = "Key7"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = [
+    "select-window",
+    "-t",
+    "7",
+] }
+
+[[keyboard.bindings]]
+key = "Key8"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = [
+    "select-window",
+    "-t",
+    "8",
+] }
+
+[[keyboard.bindings]]
+key = "Key9"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = [
+    "select-window",
+    "-t",
+    "9",
+] }
+
+[[keyboard.bindings]]
+key = "LBracket"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = ["previous-window"] }
+
+[[keyboard.bindings]]
+key = "RBracket"
+mods = "Command"
+command = { program = "/opt/homebrew/bin/tmux", args = ["next-window"] }
+
+[[keyboard.bindings]]
+chars = "\f"
+key = "R"
+mode = "~Vi|~Search"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ClearHistory"
+key = "R"
+mode = "~Vi|~Search"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "T"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0001"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0005"
+key = "Right"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Back"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B\u007F"
+key = "Back"
+mods = "Alt"
+
+[general]
+live_config_reload = true
+
+[colors.bright]
+black = "#4d4d4d"
+blue = "#a277ff"
+cyan = "#61ffca"
+green = "#61ffca"
+magenta = "#a277ff"
+red = "#ff6767"
+white = "#edecee"
+yellow = "#ffca85"
+
+[colors.cursor]
+cursor = "#00D1FF"
+
+[colors.normal]
+black = "#110f18"
+blue = "#a277ff"
+cyan = "#61ffca"
+green = "#61ffca"
+magenta = "#a277ff"
+red = "#ff6767"
+white = "#edecee"
+yellow = "#ffca85"
+
+[colors.primary]
+background = "#15141b"
+foreground = "#edecee"
+
+[colors.search.focused_match]
+background = "#00D1FF"
+foreground = "#ffffff"
+
+[colors.search.matches]
+background = "#ffffff"
+foreground = "#000000"
+
+[colors.selection]
+background = "#29263c"
+text = "CellForeground"
+
+[cursor.style]
+shape = "Beam"
+
+[font]
+size = 14.0
+
+# JetBrainsMono Nerd Font
+# JetBrainsMono Nerd Font
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+#family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+#family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 1
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+
+[font.offset]
+x = 0
+y = 1
+
+[scrolling]
+history = 100000
+multiplier = 4
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ''',│`|:"' ()[]{}<>'''
+
+[window]
+opacity = 0.8
+decorations = "transparent"
+
+[window.dimensions]
+columns = 80
+lines = 25
+
+[window.padding]
+x = 22
+y = 22
+
+
+[bell]
+animation = "Ease"
+
+#[terminal]
+[terminal.shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "/opt/homebrew/bin/tmux new-session -A -D -s main"]
