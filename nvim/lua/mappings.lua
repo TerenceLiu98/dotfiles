@@ -9,7 +9,7 @@ map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
--- copilot mapping
-map('i', '<C-l>', function ()
+-- copilot mapping, change copilot accept to option-l
+map('i', '<C-]>', function ()
   vim.fn.feedkeys(vim.fn['copilot#Accept'](), '')
 end, { desc = 'Copilot Accept', noremap = true, silent = true })

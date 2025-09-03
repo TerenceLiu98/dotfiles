@@ -19,12 +19,32 @@ command = { program = "/opt/homebrew/bin/tmux", args = ["new-window"] }
 [[keyboard.bindings]]
 key = "D"
 mods = "Command|Shift"
-command = { program = "/opt/homebrew/bin/tmux", args = ["split-window", "-c", "#{pane_current_path}", "-h", "-p", "20"] }
+command = { program = "/opt/homebrew/bin/tmux", args = ["split-window", "-c", "#{pane_current_path}", "-h", "-p", "30"] }
 
 [[keyboard.bindings]]
 key = "H"
 mods = "Command|Shift"
-command = { program = "/opt/homebrew/bin/tmux", args = ["split-window", "-c", "#{pane_current_path}", "-v", "-p", "20"] }
+command = { program = "/opt/homebrew/bin/tmux", args = ["split-window", "-c", "#{pane_current_path}", "-v", "-p", "30"] }
+
+[[keyboard.bindings]]
+key = "Up"
+mods = "Command|Shift"
+command = { program = "/opt/homebrew/bin/tmux", args = ["select-pane", "-U"] }
+
+[[keyboard.bindings]]
+key = "Down"
+mods = "Command|Shift"
+command = { program = "/opt/homebrew/bin/tmux", args = ["select-pane", "-D"] }  
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Command|Shift"
+command = { program = "/opt/homebrew/bin/tmux", args = ["select-pane", "-L"] }  
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Command|Shift"
+command = { program = "/opt/homebrew/bin/tmux", args = ["select-pane", "-R"] }  
 
 [[keyboard.bindings]]
 key = "Key1"
@@ -220,7 +240,7 @@ text = "CellForeground"
 shape = "Beam"
 
 [font]
-size = 14.0
+size = 12.0
 
 # JetBrainsMono Nerd Font
 # JetBrainsMono Nerd Font

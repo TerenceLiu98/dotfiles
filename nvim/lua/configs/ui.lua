@@ -9,4 +9,9 @@ M.nvim_tree = {
   },
 }
 
+M.toggleterm = {
+  open_mapping = [[<c-\>]],
+  start_in_insert = true,
+  direction = "horizontal"
+}
 return M

@@ -35,7 +35,11 @@ return {
     },
     lazy = false
   },
-
+  {
+    "akinsho/toggleterm.nvim",
+    opts = require("configs.ui").toggleterm,
+    lazy = false,
+  }
 }
 
 
